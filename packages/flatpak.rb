@@ -7,7 +7,7 @@ class Flatpak < Package
   version "#{@_ver}-1"
   license 'LGPL-2.1+'
   compatibility 'all'
-  source_url "https://github.com/flatpak/flatpak/releases/download/#{@_ver}/flatpak-#{@_ver}.tar.xz"
+  source_url "https://github.com/flatpak/flatpak.git"
   source_sha256 'db152739d072f8ff299e4e888d8963a1b4538da7b10e0b86525be438f2e1dde4'
 
   binary_url({
