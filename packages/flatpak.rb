@@ -3,25 +3,12 @@ require 'package'
 class Flatpak < Package
   description 'Flatpak is a system for building, distributing, and running sandboxed desktop applications on Linux.'
   homepage 'https://flatpak.org'
-  @_ver = '1.10.2'
-  version "#{@_ver}-1"
+  @_ver = '1.15.6'
+  version "#{@_ver}"
   license 'LGPL-2.1+'
   compatibility 'all'
   source_url "https://github.com/flatpak/flatpak/releases/download/#{@_ver}/flatpak-#{@_ver}.tar.xz"
   source_sha256 'db152739d072f8ff299e4e888d8963a1b4538da7b10e0b86525be438f2e1dde4'
-
-  binary_url({
-    aarch64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/flatpak/1.10.2-1_armv7l/flatpak-1.10.2-1-chromeos-armv7l.tar.xz',
-     armv7l: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/flatpak/1.10.2-1_armv7l/flatpak-1.10.2-1-chromeos-armv7l.tar.xz',
-       i686: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/flatpak/1.10.2-1_i686/flatpak-1.10.2-1-chromeos-i686.tar.xz',
-     x86_64: 'https://gitlab.com/api/v4/projects/26210301/packages/generic/flatpak/1.10.2-1_x86_64/flatpak-1.10.2-1-chromeos-x86_64.tar.xz'
-  })
-  binary_sha256({
-    aarch64: 'f03b38526bd4874d0e917bac2e743929f8e118ab67796ee088f36e4712d4c35b',
-     armv7l: 'f03b38526bd4874d0e917bac2e743929f8e118ab67796ee088f36e4712d4c35b',
-       i686: 'cd76a117df4c1757410dda6f17ac5d1a46a0028ab3116ae3fea5af602774a1d4',
-     x86_64: 'ae83c2515abec6eb9969b69d838280f70f620f51ad21231ce5e297c87f5cff5c'
-  })
 
   depends_on 'appstream_glib'
   depends_on 'bubblewrap'
